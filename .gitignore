@@ -1,0 +1,72 @@
+### 이미 트래킹된 경우 대처방법 ###
+### git status ###
+### git rm --cached src/main/resources/application-secret.properties ###
+
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### React ###
+node_modules/
+dist/
+build/
+.next/
+
+### 로그/크래시 덤프 ###
+*.log
+logs/
+hs_err_pid*
+replay_pid*
+
+### 환경변수/비밀설정 (DB 비번 등) ###
+.env
+.env.*
+application-*.properties
+application-*.yml
+!application.properties
+!application.yml
+
+### DB비밀번호 ###
+application-secret.properties
+
+### OS 쓰레기 파일 ###
+.DS_Store
+Thumbs.db
+
+### DB 파일 - H2 같은 거 쓸 때 ###
+*.mv.db
+*.trace.db
