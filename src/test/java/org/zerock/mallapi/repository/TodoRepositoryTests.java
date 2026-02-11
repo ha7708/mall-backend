@@ -14,6 +14,9 @@ import java.time.LocalDate;
 import java.util.Optional;
 
 @SpringBootTest
+// @Transactional 을 붙이게 되면 테스트 종료 시 자동 롤백 됨.
+// 그러나 테스트용 DB를 따로 쓰는 것이 바람직함.
+// 예: src/test/resources/application.properties에 테스트 DB 설정
 @Log4j2
 public class TodoRepositoryTests {
 

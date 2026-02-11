@@ -1,5 +1,7 @@
 package org.zerock.mallapi.service;
 
+import org.zerock.mallapi.dto.PageRequestDTO;
+import org.zerock.mallapi.dto.PageResponseDTO;
 import org.zerock.mallapi.dto.TodoDTO;
 
 public interface TodoService {
@@ -13,6 +15,9 @@ public interface TodoService {
 
     // 삭제
     void remove(Long tno);
+
+    // 페이징
+    PageResponseDTO<TodoDTO> list(PageRequestDTO pageRequestDTO);
 
 
 }
