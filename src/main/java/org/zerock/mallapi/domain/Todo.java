@@ -6,7 +6,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name="tbl_todo")
+@Table(name = "tbl_todo")
 @Getter
 @ToString
 @Builder
@@ -24,4 +24,16 @@ public class Todo {
     private boolean complete;
     private LocalDate dueDate;
 
+    // 수정 테스트를 위해 메서드 추가
+    public void changeTitle(String title) {
+        this.title = title;
+    }
+
+    public void changeComplete(boolean complete) {
+        this.complete = complete;
+    }
+
+    public void changeDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
 }
